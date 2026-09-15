@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Van Gogh - Biografi & Eserler</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Üst Menü */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+            background: #050505;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            color: #d4af37;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        .back-btn {
+            color: #aaa;
+            text-decoration: none;
+            font-style: italic;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover { color: #d4af37; }
+
+        /* İçerik Alanı */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #d4af37;
+            font-style: italic;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 50px;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #d4af37;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        /* Eserler Galerisi */
+        .artworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .artwork-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .artwork-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border: 4px solid #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            margin-bottom: 12px;
+        }
+
+        .artwork-title {
+            font-size: 1rem;
+            color: #d4af37;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SANAT & FELSEFE</a>
+        <a href="sanat.html" class="back-btn">← Sanatçılara Dön</a>
+    </header>
+
+    <div class="container">
+        <h1>Vincent Van Gogh</h1>
+        
+        <p class="bio-text">
+            Vincent Van Gogh (1853–1890),Vincent Willem van Gogh, Hollandalı Post-Empresyonist ressamdır. Batı sanatı tarihinin en ünlü ve en etkili figürlerinden biri olarak kabul edilir. On yıldan biraz fazla bir süre içinde, yaklaşık 860'ı yağlı boya tablo olmak üzere 2.100'den fazla sanat eseri üretmiştir. Dramatik fırça darbeleri, canlı renk kullanımı ve duygusal derinliğiyle modern sanatın temellerini atmıştır.
+        </p>
+
+        <h2>Öne Çıkan Eserleri</h2>
+
+        <div class="artworks-grid">
+            <div class="artwork-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/TheStarryNightByVincentVanGogh.jpg?utm_source=tr.wikipedia.org&utm_campaign=imageinfo&utm_content=original">
+                <p class="artwork-title"> Yıldızlı Gece (1889)</p>
+            </div>
+
+            <div class="artwork-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Vincent_Willem_van_Gogh%2C_Dutch_-_Sunflowers_-_Google_Art_Project.jpg?utm_source=tr.wikipedia.org&utm_campaign=imageinfo&utm_content=original">
+                <p class="artwork-title"> 12 Ayçiçekli Vazo (1889)</p>
+            </div>
+
+            <div class="artwork-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Van_Gogh_-_Selbstbildnis_mit_verbundenem_Ohr_und_Pfeife.jpeg?utm_source=tr.wikipedia.org&utm_campaign=imageinfo&utm_content=original">
+                <p class="artwork-title">Sargılı Kulaklı Otoportre (1889)</p>
+            </div>
+        </div>
+    </div>
+        <div class="comment-box" onclick="this.querySelector('textarea').focus()">
+         <textarea placeholder="Yorum ekle..."></textarea>
+    </div>
+    <style>
+    .sanatci-kutusu {
+    position: relative;
+    padding-bottom: 90px;
+}
+
+/* Yorum Kutusu Stilleri */
+.comment-box {
+    position: absolute !important;
+    right: 35px !important;
+    bottom: -300px !important;
+    left: auto !important;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    padding: 12px;
+    cursor: text;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.comment-box:hover,
+.comment-box:focus-within {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 0.95rem;
+    color: #222;
+    font-family: inherit;
+}
+
+.comment-box textarea::placeholder {
+    color: rgba(0, 0, 0, 0.55);
+}
+</style>
+</body>
+</html>
+
