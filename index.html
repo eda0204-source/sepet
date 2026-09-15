@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanat ve Felsefe</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Georgia', serif;
+            color: #beadad;
+        }
+
+        
+        .hero-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+           
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/Baco%2C_por_Caravaggio.jpg?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+       
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 650px;
+            padding: 20px;
+        }
+
+        
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(158, 152, 152, 0.8);
+        }
+
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        
+        .btn {
+            display: inline-block;
+            width: 200px;
+            padding: 14px 0;
+            color: #827c7c;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+
+       
+        .btn:hover {
+            background: #332c2c;
+            color: #000000;
+            border-color: #0a0707;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <div class="overlay"></div>
+        
+        <div class="content">
+            
+            <p class="about-text">
+                İnsanlığın estetik arayışı ile düşünsel derinliğinin kesiştiği noktadayız. 
+                Bu platform, fırça darbelerindeki anlamı ve imgelerin arkasındaki düşünceyi 
+                keşfetmek üzere kurulmuş bağımsız bir alandır.
+            </p>
+
+            
+            <div class="button-group">
+                <a href="sanat.html" class="btn">SANAT</a>
+                <a href="felsefe.html" class="btn">FELSEFE</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
